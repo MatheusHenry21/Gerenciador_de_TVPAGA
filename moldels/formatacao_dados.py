@@ -8,6 +8,7 @@ from maneger.exceptions.exceptions_routers import (
 def nome_formatacao(nome):
     if not nome or nome == '' or nome == None:
         raise NomeVazio("Nome não pode está vazio")
+    nome = nome.title()
     return nome
 
 def formatacao_celular(celular):

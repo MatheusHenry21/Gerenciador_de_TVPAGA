@@ -37,12 +37,14 @@ def listar_clientes_testes():
 def buscar_por_nome_efetivo(nome):
     efetivos = existencia_nome_efetivos(nome)
     if efetivos:
+        nome = nome.title()
         return info_cliente_efetivo(buscar_cliente_efetivo_nome(nome))
     raise DadosExistenteError(f"Erro. O nome '{nome}' não pertence a nenhum cliente.")
 
 def buscar_por_nome_teste(nome):
     testes = existencia_nome_testes(nome)
     if testes:
+        nome = nome.title()
         return info_cliente_teste(buscar_cliente_teste_nome(nome))
     raise DadosExistenteError(f"Erro. O nome '{nome}' não pertence a nenhum cliente.")
 

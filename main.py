@@ -19,24 +19,24 @@ def criar_banco():
 
 app.include_router(
     gestaoClientes,
-    prefix="/clientes",
+    prefix="/webhook",
     tags=["Clientes"]
 )
 
 app.include_router(
     gestaoAssinaturas,
-    prefix="/assinaturas",
+    prefix="/webhook",
     tags=["Assinaturas"]
 )
 
 app.include_router(
     relatorio,
-    prefix="/relatorios",
+    prefix="/webhook",
     tags=["Relatorios"]
 )
 
 app.include_router(
     configuracoes,
-    prefix="/configuracoes",
+    prefix="/webhook",
     tags=["Configuracoes"]
 )
